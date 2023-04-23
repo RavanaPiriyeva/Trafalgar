@@ -1,0 +1,60 @@
+nav {
+    font-family: $main-font;
+    padding: 60px 0;
+
+    .nav_logo {
+        @include nav-logo;
+    }
+    .nav_list {
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 40px;
+            font-weight: 400;
+            transition: 0.5s;
+            a {
+                color: $gray-color;
+            }
+            &:hover {
+                font-weight: 700;
+
+                a {
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding: 55px 15px;
+    }
+    .nav_bar_icon {
+        font-size: 25px;
+        color: $dark-color;
+        .side_bar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 0;
+            transition: all 0.5s;
+            overflow-x: hidden;
+            height: 100vh;
+            a {
+                color: $white-color;
+            }
+            li {
+                padding: 20px 0;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            .side_bar {
+                width: 250px;
+                background-color: $dark-color;
+                overflow: visible;
+                font-weight: 600;
+                padding: 55px 20px;
+                z-index: 2;
+            }
+        }
+    }
+}

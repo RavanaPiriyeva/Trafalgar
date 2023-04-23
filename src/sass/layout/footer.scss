@@ -1,0 +1,50 @@
+footer {
+    background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+    padding: 100px 0;
+    font-family: $main-font;
+    color: $white-color;
+    position: relative;
+    .footer_point_img1{
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        
+    }
+    .footer_point_img2{
+        position: absolute;
+        right: 100px;
+        top: -60px;
+        z-index: -1;
+        
+    }
+    .footer_logo{
+        @include footer-logo;
+        & +p{
+            padding: 30px 0;
+        }
+    }
+    p{
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+    }
+    h3{
+        font-size: 20px;
+        line-height: 60px;
+    }
+    li a{
+        color: $white-color;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 38px;
+        transition: all 0.5s;
+        &:hover{
+            padding-left: 15px;
+        }
+    }
+    @media screen and (max-width:992px){
+       h3{
+           padding-top: 40px;
+       } 
+    }
+}
